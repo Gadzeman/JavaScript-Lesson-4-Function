@@ -391,7 +391,7 @@ function rgb(a, b, c){
     console.log(a, b, c)
 }
 
-rgb()
+rgb(12, 22)
 
 console.log("======================================================================")
 
@@ -400,4 +400,58 @@ console.log("===================================================================
 // - с значениями
 // и будет возвращать объект полученный в результате склеивания этих двух массивов
 // пример:
-// zip(['name', 'age', 'status'], ['Kira', 12, false])  —>  { name: 'Kira', age: 12, status: false }s
+// zip(['name', 'age', 'status'], ['Kira', 12, false])  —>  { name: 'Kira', age: 12, status: false }
+
+function zip(arr1, arr2){
+    let person = {}
+    for (let i = 0; i < arr1.length; i++) {
+        person[arr1[i]] = arr2[i]
+    }
+    console.log(person)
+}
+
+zip(['name', 'age', 'status'], ['Kira', 12, false])
+
+console.log("======================================================================")
+
+// создать функцию которая будет принимать любое количество чисел,
+// и будет возвращать массив без дубликатов uniq(1, 2, 2, 3, 4, 2, 4, 5) —> [1,2,3,4,5]
+
+function uniq(){
+    let arrUniq = []
+    for (const num of arguments) {
+        if(arrUniq.includes(num) === false){
+            arrUniq.push(num)
+        }
+    }
+    console.log(arrUniq)
+}
+
+uniq(1, 1, 1, 1, 1, 2, 3, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 9, 10, 10, 10, 11, 12, 13, 13)
+
+console.log("======================================================================")
+
+// создать функцию которая принимает число (высоту) и делает половину пирамидки (как в игре марио)
+
+function piramid(num) {
+    let piramid = "*"
+    console.log(piramid)
+    for (let i = 0; i < num; i++) {
+        console.log(piramid + "*")
+        piramid = piramid + "*"
+    }
+}
+
+console.log("======================================================================")
+
+function mario(num){
+    let probel = " ";
+    let piramid = "*";
+
+    console.log(probel + piramid)
+    for (let i = 0; i < num; i++) {
+        
+    }
+}
+
+mario(1)
